@@ -1,8 +1,10 @@
 import { Inter } from "next/font/google";
+import { Tourney } from "next/font/google";
 import "./globals.css";
 import Link from "next/link";
 
 const inter = Inter({ subsets: ["latin"] });
+const tourney = Tourney({ subsets: ["latin"] });
 
 export const metadata = {
   title: "Create Next App",
@@ -12,7 +14,7 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body className={inter.className}>
+      <body className={tourney.className}>
         <header>This is my header</header>
         <nav>
           This is my nav bar
