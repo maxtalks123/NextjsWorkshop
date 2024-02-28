@@ -21,6 +21,7 @@ export default function RootLayout({ children }) {
           <Link href="/">Home</Link>
           <Link href="/About">About</Link>
           <Link href="/posts/1">Post 1</Link>
+          <Link href="/posts/new">Create a new post</Link>
         </nav>
         {children}
         <footer>This is my footer</footer>
