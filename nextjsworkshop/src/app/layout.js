@@ -2,6 +2,7 @@ import { Inter } from "next/font/google";
 import { Tourney } from "next/font/google";
 import "./globals.css";
 import Link from "next/link";
+import { ActiveLink } from "./fast/ActiveLink";
 
 const inter = Inter({ subsets: ["latin"] });
 const tourney = Tourney({ subsets: ["latin"] });
@@ -18,7 +19,7 @@ export default function RootLayout({ children }) {
         <header>This is my header</header>
         <nav>
           This is my nav bar
-          <Link href="/">Home</Link>
+          <ActiveLink href="/">Home</ActiveLink>
           <Link href="/About">About</Link>
           <Link href="/posts/1">Post 1</Link>
           <Link href="/posts/new">Create a new post</Link>
