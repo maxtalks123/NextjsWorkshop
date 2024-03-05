@@ -17,7 +17,7 @@ export default function RootLayout({ children }) {
     <html lang="en">
       <body className={tourney.className}>
         <header>This is my header</header>
-        <nav>
+        <nav className="p-8 m-8 space-x-4">
           This is my nav bar
           <ActiveLink href="/">Home</ActiveLink>
           <Link href="/About">About</Link>

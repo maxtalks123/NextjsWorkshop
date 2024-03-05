@@ -1,4 +1,5 @@
 import { sql } from "@vercel/postgres";
+import { notFound } from "next/navigation";
 
 export async function generateMetadata({ params }) {
   const response = await fetch(
@@ -17,6 +18,10 @@ export default async function Page({ params }) {
   SELECT * FROM posts WHERE id = ${params.id};`
   ).rows[0];
   console.log(post);
+
+  if (!post) {
+    notFound();
+  }
   return (
     <div>
       <h1> Post {post.id}</h1>
